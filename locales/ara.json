@@ -60,7 +60,18 @@
     "yes_confirm": "نعم ، أنا أؤكد",
     "no": "رقم",
     "Alert": "انذار",
-    "ok": "تمام"
+    "ok": "تمام",
+    "credentialRegistry": "سجل الاعتماد",
+    "errors": {
+      "savingFailed": {
+        "title": "فشل حفظ بطاقة",
+        "message": "حدث خطأ أثناء حفظ البطاقة في المتجر."
+      },
+      "diskFullError": {
+        "title": "فشل حفظ بطاقة",
+        "message": "لا يمكن استلام المزيد من بطاقةالبطاقات أو حفظه لأن بيانات التطبيق ممتلئة."
+      },
+    }
   },
   "HomeScreenKebabPopUp": {
     "title": "المزيد من الخيارات",
@@ -72,6 +83,28 @@
     "removeFromWallet": "إزالة من المحفظة",
     "revokeId": "إبطال الهوية",
     "revokeMessage": "إبطال المعرف الظاهري لملف التعريف هذا"
+  },
+  "WalletBinding": {
+    "inProgress": "في تَقَدم",
+    "profileAuthenticated": "تمت مصادقة الملف الشخصي!"
+  },
+  "BindingVcWarningOverlay": {
+    "alert": "يرجى تأكيد",
+    "BindingWarning": "إذا قمت بتمكين التحقق من بيانات الاعتماد هذه في محفظة أخرى ، فسيتم تجاوزها. هل تريد المتابعة؟",
+    "yesConfirm": "نعم ، أؤكد",
+    "no": "لا"
+  },
+  "HomeScreenKebabPopUp": {
+    "title": "المزيد من الخيارات",
+    "unPinCard": "Unpin البطاقة",
+    "pinCard": "البطاقة الشخصية",
+    "offlineAuthenticationDisabled!": "تم تعطيل المصادقة دون اتصال!",
+    "offlineAuthDisabledMessage": "انقر هنا لتمكين بيانات الاعتماد هذه لاستخدامها في المصادقة دون اتصال.",
+    "viewActivityLog": "عرض سجل النشاط",
+    "removeFromWallet": "إزالة من المحفظة",
+    "revokeId": "إبطال الهوية",
+    "revokeMessage": "إبطال المعرف الظاهري لملف التعريف هذا",
+    "ActivityLog": "عرض سجل النشاط"
   },
   "WalletBinding": {
     "inProgress": "في تَقَدم",
@@ -123,6 +156,11 @@
     "clickHere": "انقر هنا",
     "version": "الإصدار: 0.4.1.1",
     "tuvaliVersion": "نسخة توفالي: v0.3.9-b16c5ea"
+  },
+  "HomeScreen": {
+    "myVcsTab": "محذوف\n{{vcLabel}}",
+    "receivedVcsTab": "مستلم\n{{vcLabel}}",
+    "historyTab": "تاريخ"
   },
   "HelpScreen": {
     "header": "يساعد",
@@ -185,7 +223,6 @@
     "header": "استرجع هويتك",
     "guideLabel": "حدد نوع المعرف وأدخل UIN أو VID المقدم من MOSIP للمعرف الذي ترغب في استرداده",
     "generateVc": "إنشاء بطاقة",
-    "downloadID": "معرف التنزيل",
     "enterId": "أدخل {{idType}}",
     "noUIN/VID": "ليس لديك UIN / VID؟ ",
     "getItHere": "احصل عليها الآن",
@@ -198,19 +235,31 @@
     "resendCode": "أعد إرسال الرمز"
   },
   "MyVcsTab": {
-    "downloadCard": "تحميل البطاقة",
+    "addVcButton": "بطاقة إضافة",
+    "generateVc": "البطاقاتإنشاء",
+    "generateVcDescription": "اضغط على \"إضافة بطاقة \" أدناه لتنزيل بطاقتك",
+    "downloadID": "تحميل البطاقة",
     "bringYourDigitalID": "أحضر هويتك الرقمية",
-    "generateVcDescription": "لتنزيل بطاقة انقر على تنزيل بطاقة أدناه",
-    "downloadingYourId": "تنزيل بطاقتك ، قد يستغرق هذا ما يصل إلى 5 دقائق"
+    "downloadingYourId": "تنزيل بطاقتك ، قد يستغرق هذا ما يصل إلى 5 دقائق",
+    "errors": {
+      "savingFailed": {
+        "title": "فشل حفظ بطاقة",
+        "message": "حدث خطأ أثناء حفظ البطاقة في المتجر."
+      },
+      "diskFullError": {
+        "title": "فشل حفظ بطاقة",
+        "message": "لا يمكن استلام المزيد من بطاقةالبطاقات أو حفظه لأن بيانات التطبيق ممتلئة."
+      }
+    }
   },
   "OnboardingOverlay": {
-    "stepOneTitle": "مشاركة آمنة!",
-    "stepOneText": "شارك واستقبل بطاقة switfly باستخدام كاميرا هاتفك لمسح رموز QR",
-    "stepTwoTitle": "المحفظة الرقمية الموثوقة",
-    "stepTwoText": "احتفظ ببيانات اعتمادك الرقمية معك في جميع الأوقات",
-    "stepThreeTitle": "الوصول السريع",
-    "stepThreeText": "بمجرد إنشائه ، يتم تخزين بطاقة بأمان على هاتفك المحمول.",
-    "stepThreeButton": "البدء",
+    "stepOneTitle": "مرحبًا!",
+    "stepOneText": "احتفظ ببيانات الاعتماد الرقمية معك في جميع الأوقات. للبدء ، أضف البطاقات إلى ملفك الشخصي.",
+    "stepTwoTitle": "إدارة البطاقة",
+    "stepTwoText": "بمجرد إنشائه ، يتم تخزين  البطاقاتبأمان على هاتفك المحمول ويمكن إعادة تسميته أو مشاركته في أي وقت.",
+    "stepThreeTitle": "مشاركة سهلة",
+    "stepThreeText": "مشاركة واستلام البطاقات switflyباستخدام كاميرا هاتفك لمسح رموز QR.",
+    "stepThreeButton": "ابدأ وأضف البطاقة",
     "skip": "يتخطى",
     "next": "التالي"
   },
@@ -255,6 +304,22 @@
     "version": "الإصدار",
     "useBle": "مدعوم من BLE",
     "useGoogleNearby": "مدعوم من GoogleNearby"
+  },
+  "ProfileScreen": {
+    "name": "اسم",
+    "vcLabel": "تسمية VC",
+    "language": "اللغة",
+    "credentialRegistry": "سجل الاعتماد",
+    "bioUnlock": "افتح مع القياسات الحيوية",
+    "authFactorUnlock": "إلغاء تأمين عامل المصادقة",
+    "AppMetaData": "حول إنجي",
+    "logout": "تسجيل خروج",
+    "revokeLabel": "إبطال VID",
+    "revokeHeader": "إبطال VID",
+    "revokingVids": "({{count}}) أنت على وشك إلغاء معرّفات VID.",
+    "revokingVidsAfter": "هذا يعني أنك لن تكون قادرًا على استخدام أو عرض أي من المعرفات المرتبطة بمعرف (معرفات) VID هؤلاء. \nهل انت متأكد انك تريد المتابعة?",
+    "empty": "فارغة",
+    "revokeSuccessful": "تم إبطال VID بنجاح"
   },
   "QrScreen": {
     "title": "QR تسجيل الدخول",
@@ -343,10 +408,12 @@
   },
   "ScanScreen": {
     "header": "مسح رمز الاستجابة السريعة",
-    "noShareableVcs": "لا تتوفر بطاقة قابلة للمشاركة.",
-    "sharingVc": "مشاركة بطاقة",
-    "bluetoothStateIos": "تم إيقاف تشغيل البلوتوث ، يرجى تشغيله من مركز التحكم",
-    "bluetoothStateAndroid": "تم إيقاف تشغيل البلوتوث ، يرجى تشغيله من قائمة الإعدادات السريعة",
+    "noShareableVcs": "لا تتوفر بطاقات قابلة للمشاركة.",
+    "bluetoothStateAndroid": "يرجى تشغيل البلوتوث من الإعدادات السريعة لدعم المشاركة المحلية",
+    "bluetoothStateIos": "يرجى تشغيل البلوتوث من مركز التحكم لدعم المشاركة المحلية",
+    "enableBluetoothMessage": "يرجى تمكين أذونات البلوتوث لدعم المشاركة المحلية",
+    "enableBluetoothButtonText": "السماح لأذونات البلوتوث",
+    "sharingVc": "مشاركة بطاقة ",
     "errors": {
       "locationDisabled": {
         "message": "يجب تمكين خدمات الموقع لوظيفة المسح",

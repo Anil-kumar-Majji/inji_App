@@ -55,28 +55,26 @@
     "enableVerification": "I-activate",
     "profileAuthenticated": "Na-activate para sa online na pag-login",
     "offlineAuthDisabledHeader": "Nakabinbin ang pag-activate para sa online na pag-login",
-    "offlineAuthDisabledMessage": "Mangyaring i-click ang pindutan sa ibaba upang i-activate ang kredensyal na ito upang magamit para sa online na pag-login."
-  },
-  "HomeScreenKebabPopUp": {
-    "title": "Higit pang mga Opsyon",
-    "unPinCard": "I-unpin ang Card",
-    "pinCard": "Pin Card",
-    "offlineAuthenticationDisabled!": "Na-disable ang offline na pagpapatotoo!",
-    "offlineAuthDisabledMessage": "Mag-click dito upang paganahin ang kredensyal na ito na magamit para sa offline na pagpapatotoo.",
-    "viewActivityLog": "Tingnan ang log ng aktibidad",
-    "removeFromWallet": "Alisin sa wallet",
-    "revokeId": "Bawiin ang ID",
-    "revokeMessage": "Bawiin ang virtual ID para sa profile na ito"
-  },
-  "WalletBinding": {
-    "inProgress": "Isinasagawa",
-    "profileAuthenticated": "Na-authenticate ang profile!"
-  },
-  "BindingVcWarningOverlay": {
-    "alert": "Pakikumpirma",
-    "BindingWarning": "Kung na-enable mo ang pag-verify para sa kredensyal na ito sa isa pang wallet, ma-o-override ito. Gusto mo bang magpatuloy?",
-    "yesConfirm": "Oo, kinukumpirma ko",
-    "no": "Hindi"
+    "offlineAuthDisabledMessage": "Mangyaring i-click ang pindutan sa ibaba upang i-activate ang kredensyal na ito upang magamit para sa online na pag-login.",
+    "vid": "VID",
+    "verificationEnabledSuccess": "Na-activate para sa online na pag-login",
+    "goback": "BUMALIK KA",
+    "BindingWarning": "Kung pinagana mo ang pag-verify para sa kredensyal na ito sa isa pang wallet, ma-override ito. Gusto mo bang magpatuloy?",
+    "yes_confirm": "Oo, Kinukumpirma ko",
+    "no": "Hindi",
+    "Alert": "Alerto",
+    "ok": "Sige",
+    "credentialRegistry": "Registry ng Mga Kredensyal",
+    "errors": {
+      "savingFailed": {
+        "title": "Nabigong i-save ang Card",
+        "message": "Nagkaproblema habang nagse-save ng Card sa tindahan."
+      },
+      "diskFullError": {
+        "title": "Nabigong i-save ang Card",
+        "message": "Wala nang mga Mga kard na matatanggap o mai-save dahil puno na ang Data ng App."
+      }
+    }
   },
   "AuthScreen": {
     "header": "Gusto mo bang gumamit ng biometrics upang i-unlock ang aplikasyon?",
@@ -99,6 +97,11 @@
     "shared": "ibinahagi",
     "received": "natanggap",
     "deleted": "tinanggal"
+  },
+  "HomeScreen": {
+    "myVcsTab": "Aking\n{{vcLabel}}",
+    "receivedVcsTab": "Nakuhang\n{{vcLabel}}",
+    "historyTab": "Pangyayari"
   },
   "SettingScreen": {
     "header": "Mga setting",
@@ -180,7 +183,6 @@
     "header": "Kunin ang iyong ID",
     "guideLabel": "Piliin ang uri ng ID at ilagay ang MOSIP na ibinigay na UIN o VID ng ID na nais mong makuha",
     "generateVc": "Bumuo ng {{vcLabel}}",
-    "downloadID": "I-download ang ID",
     "enterId": "Ipasok ang {{idType}}",
     "noUIN/VID": "Walang UIN/VID? ",
     "getItHere": "Kunin mo na",
@@ -250,6 +252,22 @@
     "version": "Bersyon",
     "useBle": "Pinapatakbo ng BLE",
     "useGoogleNearby": "Pinapagana ng GoogleNearby"
+  },
+  "ProfileScreen": {
+    "name": "Pangalan",
+    "vcLabel": "Panawag sa VC",
+    "language": "Wika",
+    "credentialRegistry": "Registry ng Mga Kredensyal",
+    "bioUnlock": "I-unlock gamit ang biometrics",
+    "authFactorUnlock": "Pagbukas ng auth factor",
+    "AppMetaData": "Tungkol kay Inji",
+    "logout": "Mag-logout",
+    "revokeLabel": "Kanselahin ang VID",
+    "revokeHeader": "KANSELAHIN ANG VID",
+    "revokingVids": "Kakanselahin mo na ang ({{count}}) na mga VID.",
+    "revokingVidsAfter": "Nangangahulugan ito na hindi mo na maa-access o matitingnan ang anumang mga ID na naka-link sa mga VID na ito. Sigurado ka bang gusto mong magpatuloy?",
+    "empty": "Walang laman",
+    "revokeSuccessful": "Matagumpay na nakansela ang VID"
   },
   "QrScreen": {
     "title": "QR Login",
@@ -328,8 +346,9 @@
         "message": "Mangyaring kumonekta sa internet upang paganahin ang Online sharing mode"
       },
       "bleError": {
-        "title": "Nabigong ilipat!",
-        "message": "Nagkaproblema habang inililipat ang {{vcLabel}}. Pakisubukang muli."
+        "title": "Nabigong ilipat",
+        "message": "Nagkaproblema habang inililipat ang Card. Pakisubukang muli.",
+        "hint": "Pagkakamali: {{code}}"
       }
     },
     "online": "Online",
@@ -342,6 +361,9 @@
     "sharingVc": "Pagbabahagi ng {{vcLabel}}",
     "bluetoothStateIos": "Naka-OFF ang Bluetooth, paki-ON ito mula sa control center",
     "bluetoothStateAndroid": "Naka-OFF ang Bluetooth, paki-ON ito mula sa control center",
+    "enableBluetoothMessage": "Mangyaring paganahin ang mga pahintulot ng bluetooth upang suportahan ang lokal na pagbabahagi",
+    "enableBluetoothButtonText": "Payagan ang Mga Pahintulot sa Bluetooth",
+    "sharingVc": "Pagbabahagi ng Card",
     "errors": {
       "locationDisabled": {
         "message": "Dapat na nakabukas ang Location services ng iyong mobile para maaaring makapag-scan",
