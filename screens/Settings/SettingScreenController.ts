@@ -27,7 +27,6 @@ import {
 import { GlobalContext } from '../../shared/GlobalContext';
 import { useTranslation } from 'react-i18next';
 import { Platform } from 'react-native';
-import { MainRouteProps } from '../../routes/main';
 import { RequestRouteProps } from '../../routes';
 
 export function useSettingsScreen(props: RequestRouteProps) {
@@ -151,7 +150,6 @@ export function useSettingsScreen(props: RequestRouteProps) {
       setIsVisible(false);
       const navigate = () => {
         authService.send(AuthEvents.LOGOUT());
-        props.navigation.navigate('Request');
       };
 
       if (Platform.OS === 'ios') {

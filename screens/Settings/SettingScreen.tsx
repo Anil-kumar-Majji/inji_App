@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, Pressable, View, Image } from 'react-native';
 import { Icon, ListItem, Switch } from 'react-native-elements';
-import { Button, Column, Row, Text } from '../../components/ui';
+import { Column, Row, Text } from '../../components/ui';
 import { Theme } from '../../components/ui/styleUtils';
 import { MessageOverlay } from '../../components/MessageOverlay';
 
@@ -13,9 +13,8 @@ import { Modal } from '../../components/ui/Modal';
 import { CREDENTIAL_REGISTRY_EDIT } from 'react-native-dotenv';
 import { AboutInji } from './AboutInji';
 import { EditableListItem } from '../../components/EditableListItem';
-import { RequestRouteProps, RootRouteProps } from '../../routes';
+import { RequestRouteProps } from '../../routes';
 import { ReceivedCards } from './ReceivedCards';
-import { MainRouteProps } from '../../routes/main';
 
 const LanguageSetting: React.FC = () => {
   const { t } = useTranslation('SettingScreen');
@@ -66,33 +65,41 @@ export const SettingScreen: React.FC<SettingProps & RequestRouteProps> = (
         headerElevation={2}
         onDismiss={controller.TOGGLE_SETTINGS}>
         <ScrollView backgroundColor={Theme.Colors.lightGreyBackgroundColor}>
-          <Text weight="semibold" margin="10" color={Theme.Colors.aboutVersion}>
-            {t('injiAsVerifierApp')}
-          </Text>
-          <Row
-            align="space-evenly"
-            backgroundColor={Theme.Colors.whiteBackgroundColor}>
-            <Pressable onPress={controller.RECEIVE_CARD}>
-              <Column style={Theme.Styles.receiveCardsContainer}>
-                <Image
-                  source={Theme.ReceiveCardIcon}
-                  style={{ alignSelf: 'center' }}
-                />
-                <Text margin="6" weight="semibold">
-                  {t('receiveCard')}
-                </Text>
-              </Column>
-            </Pressable>
-            <ReceivedCards
-              isVisible={false}
-              service={undefined}
-              vcItemActor={undefined}
-            />
-          </Row>
+          <Column style={{ display: Platform.OS !== 'ios' ? 'flex' : 'none' }}>
+            <Text
+              weight="semibold"
+              margin="10"
+              color={Theme.Colors.aboutVersion}>
+              {t('injiAsVerifierApp')}
+            </Text>
+            <Row
+              align="space-evenly"
+              backgroundColor={Theme.Colors.whiteBackgroundColor}>
+              <Pressable onPress={controller.RECEIVE_CARD}>
+                <Column style={Theme.Styles.receiveCardsContainer}>
+                  <Image
+                    source={Theme.ReceiveCardIcon}
+                    style={{ alignSelf: 'center' }}
+                  />
+                  <Text margin="6" weight="semibold">
+                    {t('receiveCard')}
+                  </Text>
+                </Column>
+              </Pressable>
+              <ReceivedCards
+                isVisible={false}
+                service={undefined}
+                vcItemActor={undefined}
+              />
+            </Row>
 
-          <Text weight="semibold" margin="10" color={Theme.Colors.aboutVersion}>
-            {t('basicSettings')}
-          </Text>
+            <Text
+              weight="semibold"
+              margin="10"
+              color={Theme.Colors.aboutVersion}>
+              {t('basicSettings')}
+            </Text>
+          </Column>
           <Column fill>
             <MessageOverlay
               isVisible={controller.alertMsg != ''}
